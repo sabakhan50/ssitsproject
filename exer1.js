@@ -107,3 +107,43 @@ let sarray1 = array1.sort(function(a,b){
     return b.first_name.localeCompare(a.first_name);
 })
 console.log(sarray1);
+
+
+// 7. Calculate how many .org, .au, .com emails are there in the given list.
+
+//.org mails
+var z=0;
+array1.filter(
+    (v)=>{
+        const e=v.email.includes(".org");
+        if(e == true){
+        ++z;
+        }
+    }
+)
+console.log("Number of .org mails: "+z)
+
+//.au mails
+var f=0
+array1.filter(
+    (v)=>{
+        const e=v.email.includes(".au");
+        if(e == true){
+        ++f;
+        }
+    }
+)
+console.log("Number of .au mails: "+f)
+
+//.com mails
+var g=0
+array1.filter(
+    (v)=>{
+        const e=v.email.includes(".com");
+        if(e == true){
+        ++g;
+        }
+    }
+)
+console.log("Number of .com mails: "+g)
+
